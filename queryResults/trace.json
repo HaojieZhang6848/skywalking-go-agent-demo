@@ -1,0 +1,395 @@
+{
+    "data": {
+        "queryTrace": {
+            "spans": [
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "serviceA",
+                    "serviceInstanceName": "da9ced5ccbf711ef975c5ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100702,
+                    "endTime": 1736145108349,
+                    "endpointName": "GET:/hello",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GoHttpServer",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8000/hello"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                    "spanId": 2,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "serviceA",
+                    "serviceInstanceName": "da9ced5ccbf711ef975c5ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100702,
+                    "endTime": 1736145103068,
+                    "endpointName": "GET:/helloB",
+                    "type": "Exit",
+                    "peer": "localhost:8001",
+                    "component": "GoHttpClient",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "dfb965cacbf711ef85715ebbf69eeefa.54.39478987007030001",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                            "parentSegmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                            "parentSpanId": 2,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "serviceB",
+                    "serviceInstanceName": "dfb9e0c9cbf711ef85715ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100703,
+                    "endTime": 1736145103068,
+                    "endpointName": "GET:/helloB",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GoHttpServer",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "serviceA",
+                    "serviceInstanceName": "da9ced5ccbf711ef975c5ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100702,
+                    "endTime": 1736145104425,
+                    "endpointName": "GET:/helloB",
+                    "type": "Exit",
+                    "peer": "localhost:8001",
+                    "component": "GoHttpClient",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "dfb965cacbf711ef85715ebbf69eeefa.53.39478987007030001",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                            "parentSegmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "serviceB",
+                    "serviceInstanceName": "dfb9e0c9cbf711ef85715ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100703,
+                    "endTime": 1736145104425,
+                    "endpointName": "GET:/helloB",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GoHttpServer",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                    "spanId": 3,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "serviceA",
+                    "serviceInstanceName": "da9ced5ccbf711ef975c5ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100702,
+                    "endTime": 1736145105328,
+                    "endpointName": "GET:/helloB",
+                    "type": "Exit",
+                    "peer": "localhost:8001",
+                    "component": "GoHttpClient",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "dfb965cacbf711ef85715ebbf69eeefa.55.39478987007030001",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                            "parentSegmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                            "parentSpanId": 3,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "serviceB",
+                    "serviceInstanceName": "dfb9e0c9cbf711ef85715ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100703,
+                    "endTime": 1736145105328,
+                    "endpointName": "GET:/helloB",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GoHttpServer",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                    "spanId": 5,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "serviceA",
+                    "serviceInstanceName": "da9ced5ccbf711ef975c5ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100702,
+                    "endTime": 1736145105947,
+                    "endpointName": "GET:/helloB",
+                    "type": "Exit",
+                    "peer": "localhost:8001",
+                    "component": "GoHttpClient",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "dfb965cacbf711ef85715ebbf69eeefa.57.39478987007030001",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                            "parentSegmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                            "parentSpanId": 5,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "serviceB",
+                    "serviceInstanceName": "dfb9e0c9cbf711ef85715ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100703,
+                    "endTime": 1736145105947,
+                    "endpointName": "GET:/helloB",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GoHttpServer",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                    "spanId": 4,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "serviceA",
+                    "serviceInstanceName": "da9ced5ccbf711ef975c5ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100702,
+                    "endTime": 1736145108349,
+                    "endpointName": "GET:/helloB",
+                    "type": "Exit",
+                    "peer": "localhost:8001",
+                    "component": "GoHttpClient",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                    "segmentId": "dfb965cacbf711ef85715ebbf69eeefa.56.39478987007030001",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020001",
+                            "parentSegmentId": "da9c9d82cbf711ef975c5ebbf69eeefa.35.39478987007020002",
+                            "parentSpanId": 4,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "serviceB",
+                    "serviceInstanceName": "dfb9e0c9cbf711ef85715ebbf69eeefa@192.168.1.121",
+                    "startTime": 1736145100703,
+                    "endTime": 1736145108349,
+                    "endpointName": "GET:/helloB",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GoHttpServer",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "url",
+                            "value": "localhost:8001/helloB"
+                        },
+                        {
+                            "key": "status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": []
+                }
+            ]
+        }
+    }
+}

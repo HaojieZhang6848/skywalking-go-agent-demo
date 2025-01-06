@@ -18,10 +18,20 @@ func main() {
 		logrus.Info("This is a info log in serviceA before calling serviceB")
 		logrus.Warn("This is a warn log in serviceA before calling serviceB")
 		logrus.Error("This is a error log in serviceA before calling serviceB")
+		c := make(chan string, n)
+		for i := 0; i < n; i++ {
+			go func() {
+				c <- callServiceB()
+			}()
+		}
 		s := ""
 		for i := 0; i < n; i++ {
-			s += callServiceB()
+			s += <-c
+			if i < n-1 {
+				s += "\n"
+			}
 		}
+		defer close(c)
 		logrus.Debug("This is a debug log in serviceA after calling serviceB")
 		logrus.Info("This is a info log in serviceA after calling serviceB")
 		logrus.Warn("This is a warn log in serviceA after calling serviceB")
